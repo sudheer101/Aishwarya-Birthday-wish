@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10091f">
+  <meta name="description" content="A little birthday surprise for Aishwarya">
+  <title>Happy Birthday Aishwarya 🎂✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="bokeh" aria-hidden="true"></div>
+
+  <div class="banner banner-top" aria-hidden="true">
+    <div class="banner-track">
+      <span>HAPPY BIRTHDAY AISHWARYA ✦ HAPPY BIRTHDAY AISHWARYA ✦ HAPPY BIRTHDAY AISHWARYA ✦</span>
+      <span>HAPPY BIRTHDAY AISHWARYA ✦ HAPPY BIRTHDAY AISHWARYA ✦ HAPPY BIRTHDAY AISHWARYA ✦</span>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero section">
+      <div class="balloon balloon-left"><span></span></div>
+      <div class="balloon balloon-right"><span></span></div>
+
+      <div class="hero-content reveal">
+        <div class="eyebrow">A little birthday surprise</div>
+        <div class="sparkle-line">✦　✧　✦</div>
+        <h1>Happy Birthday</h1>
+        <h2>Aishwarya <span>🎂</span></h2>
+        <p class="hero-subtitle">Your very own little surprise, created to celebrate the beautiful day you came into this world. 🌸</p>
+        <button id="startBtn" class="primary-btn" type="button">✨ Open your surprise</button>
+        <p id="audioHint" class="audio-hint">There is something waiting for you inside...</p>
+      </div>
+
+      <div class="scroll-cue">scroll gently ↓</div>
+    </section>
+
+    <section class="message-section section">
+      <div class="glass-card message-card reveal">
+        <div class="card-kicker">A birthday note for you</div>
+        <h3>Happy Birthday Aishwarya! 🎂✨</h3>
+
+        <div class="message">
+          <p>Many more happy returns of the day! 🥳</p>
+          <p>I hope you like this little surprise. I truly wish I could be there in person to wish you and celebrate this special day with you.</p>
+          <p>You are such a special, sweet, genuine, and kind-hearted person. The positivity and warmth you spread around you are truly something beautiful. Your sincerity, dedication, and the way you handle things with so much strength and grace have always been inspiring.</p>
+          <p>I’ve always admired the person you are, and there’s so much to learn from the way you carry yourself and face things in life. Never stop being the wonderful person you are. ❤️</p>
+          <p>Wishing you a beautiful year ahead filled with <strong>happiness, peace, success, countless beautiful moments, and everything your heart wishes for.</strong> ✨</p>
+          <p>Keep smiling, keep shining, and keep spreading those positive vibes wherever you go.</p>
+          <p class="closing">Happy Birthday once again! 🎉💫</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tease-section section">
+      <div class="tease-card reveal">
+        <div class="mini-sparkle">✦</div>
+        <p class="tease-title">A little something extra is waiting for you... ✨</p>
+        <button id="dontClick" class="danger-btn" type="button">💖 Wait… There’s More for You!</button>
+        <p class="tease-sub">You made it this far... so why stop now? Go ahead and open your little present. 😊</p>
+      </div>
+    </section>
+
+    <section id="surprise" class="music-section section hidden">
+      <div class="surprise-heading reveal">
+        <div class="eyebrow">And Here’s a Little Something Extra for You... 👀 </div>
+        <h3>Here are two little songs picked <span>especially for this moment. 🎶❤️</span></h3>
+        <p>Pick one, press play, and enjoy the moment.</p>
+      </div>
+
+      <div class="music-grid">
+        <article class="music-card glass-card reveal">
+          <div class="music-number">01</div>
+          <div class="vinyl">
+            <div class="vinyl-hole"></div>
+          </div>
+          <div class="music-copy">
+            <span class="card-kicker">Hope you like this ❤️</span>
+            <h4>Kailove</h4>
+            <p>A little song chosen just for you.</p>
+            <button class="play-btn" data-audio="song1" type="button"><span>▶</span> Play</button>
+            <div class="progress-wrap">
+              <div class="progress"><span></span></div>
+              <div class="time"><span>0:00</span><span>0:00</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="music-card glass-card special reveal">
+          <div class="special-badge">special one ✨</div>
+          <div class="music-number">02</div>
+          <div class="vinyl">
+            <div class="vinyl-hole"></div>
+          </div>
+          <div class="music-copy">
+            <span class="card-kicker">Try this out — this is special one</span>
+            <h4>Kabhi Kabhi Aditi</h4>
+            <p>Because some songs deserve their own little moment.</p>
+            <button class="play-btn" data-audio="song2" type="button"><span>▶</span> Play</button>
+            <div class="progress-wrap">
+              <div class="progress"><span></span></div>
+              <div class="time"><span>0:00</span><span>0:00</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="music-note">Only one song plays at a time. Take your pick. 🎧</p>
+    </section>
+
+    <section class="footer-section">
+      <p>May your days be filled with beautiful moments, happy memories, and endless smiles ✨</p>
+    </section>
+  </main>
+
+  <audio id="birthdaySong" preload="auto"><source src="assets/happy-birthday-piano.wav" type="audio/wav"></audio>
+
+  <audio id="song1" preload="metadata">
+    <source src="assets/kailove.mpeg" type="audio/mpeg">
+  </audio>
+  <audio id="song2" preload="metadata">
+    <source src="assets/kabhi-kabhi-aditi.mpeg" type="audio/mpeg">
+  </audio>
+
+  <div id="confetti" class="confetti-container" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
